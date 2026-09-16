@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280" role="img" aria-label="LvL Up Media symbol">
+  
+  <rect x="0" y="200" width="80" height="80" rx="18" fill="#7A2390"></rect>
+  
+  <rect x="100" y="100" width="80" height="80" rx="18" fill="#CF1F7E"></rect>
+  <rect x="100" y="200" width="80" height="80" rx="18" fill="#A31D8C"></rect>
+  
+  <rect x="200" y="0" width="80" height="80" rx="18" fill="#F3933C"></rect>
+  <rect x="200" y="100" width="80" height="80" rx="18" fill="#E6377A"></rect>
+  <rect x="200" y="200" width="80" height="80" rx="18" fill="#D61E7E"></rect>
+</svg>
