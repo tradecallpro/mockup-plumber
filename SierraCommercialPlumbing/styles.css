@@ -220,3 +220,103 @@ dialog.demo-modal::backdrop{background:rgba(4,35,19,.66)}
   *,*::before,*::after{transition:none !important;animation:none !important}
   .gal:hover img{transform:none}
 }
+
+/* ===== Zico-style dark skin (2026-10-21) ===== */
+:root{
+  --font-head:"Barlow Condensed","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --font-body:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --radius:14px;
+  --zbg:#0c0c0d; --zbg2:#141416; --zbg3:#1b1b1e; --zline:#2a2a2e;
+  --ztext:#f2f2ee; --zmuted:#b4b4ac;
+}
+body{background:var(--zbg);color:var(--ztext)}
+h1,h2,h3,h4{color:var(--ztext);text-transform:uppercase;letter-spacing:.01em;line-height:1.05}
+h1,h2{font-weight:800}
+h3{font-weight:700}
+dialog h1,dialog h2,dialog h3,dialog h4{color:var(--ink);text-transform:none;letter-spacing:0;line-height:1.15}
+h2{font-size:clamp(2rem,4.2vw,2.8rem)}
+a{color:var(--accent)}
+.eyebrow{color:var(--accent)}
+.section-lead{color:var(--zmuted)}
+.alt{background:var(--zbg2)}
+.site-header{background:#0c0c0d;border-bottom:1px solid var(--zline);box-shadow:0 2px 14px rgba(0,0,0,.35)}
+.nav a{color:var(--ztext)}
+.nav a:hover{color:var(--accent)}
+.menu-btn{background:transparent;border-color:#3a3a40}
+.menu-btn span{background:var(--ztext)}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand-mark{width:44px;height:44px;flex:0 0 auto;border-radius:11px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.brand-mark svg{width:26px;height:26px}
+.brand-mark img{width:100%;height:100%;object-fit:cover;display:block}
+.brand-text{display:flex;flex-direction:column;font-size:1rem;line-height:1.1}
+.brand-name{font-family:var(--font-head);font-weight:700;font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em;color:#fff;line-height:1}
+.brand-sub{font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--zmuted);margin-top:3px}
+.btn{border-radius:10px}
+.btn-call{background:var(--accent);color:#141414}
+.btn-call:hover{background:var(--accent);color:#141414;filter:brightness(1.08)}
+.btn-ghost{background:transparent;color:var(--ztext);border-color:#4a4a50}
+.btn-ghost:hover{background:rgba(255,255,255,.07);color:#fff}
+.hero{background:#0c0c0d}
+.hero::after{background:linear-gradient(180deg,rgba(12,12,13,.88) 0%,rgba(12,12,13,.8) 55%,#0c0c0d 100%)}
+.hero h1{font-size:clamp(2.5rem,6vw,3.9rem);text-shadow:0 2px 14px rgba(0,0,0,.6);max-width:20ch}
+.hero .eyebrow{color:var(--accent)}
+.hero-sub{color:#d6d6cf;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.hero-proof{color:#c9c9c2}
+.hero-proof b{color:#fff}
+.hl{color:var(--accent)}
+.trust{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-wrap:wrap;gap:10px 22px}
+.trust li{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;color:var(--ztext)}
+.trust svg{color:var(--accent);flex:0 0 auto}
+.strip{background:var(--accent);color:#141414}
+.strip .btn{background:#141414;color:#fff}
+.strip .btn:hover{background:#000;color:#fff}
+.card,.why-card,.review{background:var(--zbg2);border-color:var(--zline);color:var(--ztext)}
+.alt .card,.alt .why-card,.alt .review{background:var(--zbg3)}
+.card h3,.why-card h3{color:#fff}
+.card p,.why-card p{color:var(--zmuted)}
+.why-card{border-top:3px solid var(--accent)}
+.ico{width:46px;height:46px;color:var(--accent);margin-bottom:14px}
+.review p{color:var(--ztext)}
+.review .who{color:var(--zmuted)}
+.stars{color:var(--accent)}
+.badge{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+.testimonial{background:var(--zbg2);border-left:6px solid var(--accent);color:var(--ztext)}
+.testimonial cite{color:var(--zmuted)}
+.gal{background:#000}
+.form-wrap{background:var(--zbg2);border-color:var(--zline);box-shadow:none}
+.field label{color:var(--ztext)}
+.field input,.field select,.field textarea{background:#0c0c0d;border:1.5px solid #46464c;color:var(--ztext)}
+.field input::placeholder,.field textarea::placeholder{color:#8d8d94}
+.note,.consent,.form-note{color:var(--zmuted)}
+.form-error{background:rgba(179,38,30,.16);border:1px solid #8a352d;color:#ff9d90}
+.success h3{color:#fff}
+.pricing{background:#0c0c0d}
+.plan{background:#101112;border-color:#2c2c30;color:var(--ztext)}
+.plan-pop{border-color:var(--accent);background:#151517}
+.plan-price b{color:var(--accent)}
+.plan-price span,.plan-upsell,.plan-fine{color:var(--zmuted)}
+.plan-diff{color:#fff}
+.pop-badge{color:#141414}
+.gets{background:var(--zbg2);border:1px solid var(--zline);color:var(--ztext)}
+.site-footer{background:#080809;color:var(--zmuted)}
+.site-footer a{color:var(--ztext)}
+.foot-brand{background:transparent;padding:0;border-radius:0}
+.foot-small{color:var(--zmuted)}
+.legal{border-top-color:var(--zline);color:var(--zmuted)}
+.platform-tag span{color:var(--zmuted)}
+.a11y-fab{background:#1b1b1e;border:1px solid #3a3a40}
+dialog.demo-modal::backdrop{background:rgba(0,0,0,.72)}
+.mobile-bar{background:#0c0c0d;border-top:1px solid var(--zline)}
+@media (max-width:1023px){
+  .nav{background:#0c0c0d;border-bottom:1px solid var(--zline);box-shadow:0 14px 24px rgba(0,0,0,.4)}
+  .nav a{border-top:1px solid var(--zline)}
+}
+@media (min-width:980px){
+  .hero::after{background:linear-gradient(90deg,rgba(12,12,13,.94) 0%,rgba(12,12,13,.84) 46%,rgba(12,12,13,.38) 100%),linear-gradient(180deg,transparent 68%,#0c0c0d 100%)}
+}
+
+/* Sierra: keep the white pill behind the real logo in the footer */
+.foot-brand{background:#fff;padding:8px 12px;border-radius:10px}
+
+/* skin addendum: area pills */
+.area-list li{background:transparent;border-color:var(--accent);color:var(--accent)}
