@@ -1,9 +1,22 @@
 /*
  * Frans Plumbing mock-up: Tradecall Pro voice AI demo (modal + web call).
- * Flow mirrors tradecallpro.co: Turnstile -> POST /api/demo-call {turnstile, trade} -> RetellWebClient.startCall
- * with all four of access_token, call_id, transport ("gateway", pass through untouched), ice_servers.
- * The Retell API key never touches the browser. The Worker maps trade "plumber" to its demo agent;
- * if that mapping is not live yet the call fails politely and the modal offers Try again.
+ *
+ * Mirrors the tradecallpro.co homepage flow (public/js/voice-demo.js there):
+ *   Turnstile check -> POST /api/demo-call -> RetellWebClient.startCall with
+ *   ALL FOUR of { access_token, call_id, transport, ice_servers }.
+ *   transport comes back as "gateway", not LiveKit: pass it through untouched.
+ * The Retell API key never touches the browser; all guardrails are server-side.
+ *
+ * TODO (tradecallpro.co Worker, src/worker.js; nothing to change in this file once done):
+ *   1. Allow this origin: add "https://tradecallpro.github.io" to ALLOWED_ORIGINS
+ *      (and answer the CORS preflight: OPTIONS /api/demo-call with
+ *      Access-Control-Allow-Origin, -Methods POST, -Headers Content-Type, and
+ *      add Access-Control-Allow-Origin on the JSON responses).
+ *   2. Accept { trade: "plumber" } in the request body and map it to the
+ *      plumber demo agent (default stays the painting agent when omitted).
+ *   3. Add tradecallpro.github.io to the Turnstile widget's allowed hostnames
+ *      (Cloudflare dashboard) and to any hostname check in the siteverify step.
+ * Until then the call fails politely and the modal offers Try again.
  */
 (function () {
   'use strict';
