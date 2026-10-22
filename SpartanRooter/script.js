@@ -32,9 +32,10 @@
     var r = blogModal.getBoundingClientRect();
     if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) closeBlog();
   });
+  // ESC closes the dialog natively; focus goes back to the nav link, or the hamburger when the menu is collapsed.
   blogModal.addEventListener('close', function () { (visible(blogLink) ? blogLink : btn).focus(); });
 
-  // "Quote this job" buttons preselect the service in the form
+  // "Quote this job" links preselect the service in the form
   var select = document.getElementById('service');
   document.querySelectorAll('[data-service]').forEach(function (a) {
     a.addEventListener('click', function () { select.value = a.getAttribute('data-service'); });
@@ -47,14 +48,6 @@
     new IntersectionObserver(function (en) {
       bar.classList.toggle('hide', en[0].isIntersecting);
     }, { threshold: 0.15 }).observe(quote);
-  }
-
-  // The missed-call strip button opens the same demo modal as the header button
-  var stripBtn = document.getElementById('demoOpen2');
-  if (stripBtn) {
-    stripBtn.addEventListener('click', function () {
-      document.getElementById('demoOpen').click();
-    });
   }
 
   // Quote form
@@ -84,7 +77,7 @@
     // is a placeholder, so nothing is sent and we go straight to the success state.
     var endpoint = form.getAttribute('data-endpoint') || '';
     var data = Object.fromEntries(new FormData(form).entries());
-    data.source = 'sierra-commercial-plumbing-mockup-site';
+    data.source = 'spartan-mockup-site';
     data.page = location.href;
 
     function done() {
