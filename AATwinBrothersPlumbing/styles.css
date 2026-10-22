@@ -260,7 +260,7 @@ body{padding-bottom:84px}
 .ticks{align-content:start}
 
 /* v8: hero photo background with readability overlay */
-.hero{position:relative;isolation:isolate;background:#0c0c0d url("https://s10.localdatacdn.com/ca/los-angeles/9028923/original/ZUPuebyTeA.jpg") 72% center/cover no-repeat}
+.hero{position:relative;isolation:isolate;background:#0c0c0d url("https://images.pexels.com/photos/8961699/pexels-photo-8961699.jpeg?auto=compress&cs=tinysrgb&w=1600") 72% center/cover no-repeat}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(12,12,13,.86) 0%,rgba(12,12,13,.78) 55%,var(--bg) 100%)}
 @media (min-width:980px){
   .hero::before{background:linear-gradient(90deg,rgba(12,12,13,.94) 0%,rgba(12,12,13,.82) 45%,rgba(12,12,13,.35) 100%),linear-gradient(180deg,transparent 70%,var(--bg) 100%)}
